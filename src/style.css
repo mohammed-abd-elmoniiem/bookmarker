@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 
 
-  background:linear-gradient(black 30% , #000000ad   ), var(--bg-primary) radial-gradient(circle,var(--bg-secondary) 10%, transparent 20%) center / 10px 10px;
+  background:linear-gradient(black 30% , #000000ad   ), var(--bg-primary) radial-gradient(circle,var(--main-color) 10%, transparent 20%) center / 10px 10px;
   color: var(--color-2);
   background-attachment: fixed;
 
@@ -104,18 +104,6 @@ div.item{
   
 }
 
-/* div.item::after{
-  content:"#" attr(data-index);
-  display: block;
-  position: absolute;
-  top: 0;
-  left:5px;
-  /* margin: 5px; */
-  font-size: 15px;
-  /* transform: scale(0) translate(-20px ,-20px); */
-
-  transition: transform 0.2s;
-} */
 div.item a.image{
   height: 50px;
   width: 50px;
@@ -132,9 +120,9 @@ font-size: 15px;
 
 div.item i{
   position: absolute;
-  right: 2px;
-  top: 5px;
-  font-size: 15px;
+  right: -2px;
+  bottom:  2px;
+  font-size: 14px;
   /* opacity: 0; */
   transition: opacity 0.1s ;
 color: inherit;
