@@ -52,7 +52,7 @@ function storeBookmoarksLocal(){
 
   console.log(result[0])
   if(result.index != -1){
-    return `${result}/favicon.ico'`
+    return `${result}/favicon.ico`
   }
   return 'images/favicon.ico'
 }
