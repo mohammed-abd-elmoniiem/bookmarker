@@ -11,7 +11,7 @@
 
   --bg-primary:#000500;
   --bg-secondary:#02aa72f8;
-  --main-color:#7600a5;
+  --main-color:#04ad4a;
   --color-1:#8f6900f8;
   --color-2:#ddf4e7;
 
@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 
 
-  background:linear-gradient(black 30% , #000000ad   ), var(--bg-primary) radial-gradient(circle,var(--main-color) 10%, transparent 20%) center / 10px 10px;
+  background:linear-gradient(black 30% , #000000da   ), var(--bg-primary) radial-gradient(circle,var(--main-color) 10%, transparent 20%) center / 10px 10px;
   color: var(--color-2);
   background-attachment: fixed;
 
@@ -53,6 +53,7 @@ h1 {
 
 h2{
   font-size: 16px;
+  transform: translateY(-20px);
 }
 
 header .form-control{

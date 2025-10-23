@@ -116,7 +116,7 @@ function displayBookmarks(){
       
         
            
-            <div data-index="${bookmark.index}" class="item rounded-3 p-2 ">
+            <div data-index="${bookmark.index}" class="item rounded-3 p-2 " >
             
               <a href = "${bookmark.siteURL}" target="_blank" class="image d-block rounded-3 overflow-hidden">
                 <img
