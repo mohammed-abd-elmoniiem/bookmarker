@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-primary:#000500;
-  --bg-secondary:#c5c200f8;
+  --bg-secondary:#02aa2cf8;
   --main-color:#8b6b00;
   --color-1:#8f6900f8;
   --color-2:#ddf4e7;
@@ -57,12 +57,12 @@ header .form-control:focus {
  
   border-color: none;
  
-  box-shadow: 0 0 0 2px  var(--color-1);
+  box-shadow: 0 0 0 2px  var(--bg-secondary);
 
 }
 
 button{
-  background-color: var(--main-color);
+  background-color: var(--bg-secondary);
   border: none;
   padding: 5px 15px;
   border-radius: 8px;
@@ -81,9 +81,9 @@ header{
 /* item */
 div.item{
   position: relative;
-  background-color: var(--color-1);
-  height: 100px;
-  width: 100px;
+  background-color: var(--bg-secondary);
+  height: 80px;
+  width: 80px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -100,8 +100,8 @@ div.item::after{
   top: 0;
   left:5px;
   /* margin: 5px; */
-  font-size: 20px;
-  transform: scale(0) translate(-20px ,-20px);
+  font-size: 15px;
+  /* transform: scale(0) translate(-20px ,-20px); */
 
   transition: transform 0.2s;
 }
@@ -116,13 +116,15 @@ position: absolute;
 top: 100%;
 left: 50%;
 transform: translateX(-50%);
+font-size: 15px;
 }
 
 div.item i{
   position: absolute;
   right: 2px;
   top: 5px;
-  opacity: 0;
+  font-size: 18px;
+  /* opacity: 0; */
   transition: opacity 0.1s ;
 
   transition: color 0.2s ,  transform 0.2s;
