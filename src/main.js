@@ -116,12 +116,12 @@ function displayBookmarks(){
       
         
            
-            <div data-index="${bookmark.index}" class="item p-3 rounded-3">
+            <div data-index="${bookmark.index}" class="item rounded-3 p-2 ">
             
-              <a href = "${bookmark.siteURL}" target="_blank" class="image d-block ">
+              <a href = "${bookmark.siteURL}" target="_blank" class="image d-block rounded-3 overflow-hidden">
                 <img
                   class="w-100 h-100 object-fit-cover"
-                  src="https://www.google.com/s2/favicons?domain=${bookmark.siteURL}&sz=64"
+                  src="https://www.google.com/s2/favicons?domain=${bookmark.siteURL}&sz=128"
                   alt="site icon"
                 />
               
