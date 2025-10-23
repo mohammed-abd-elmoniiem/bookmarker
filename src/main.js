@@ -52,7 +52,7 @@ function storeBookmoarksLocal(){
 
   console.log(result[0])
   if(result.index != -1){
-    return `${result}/favicon.ico`
+    return `https://www.google.com/s2/favicons?domain=${result}&sz=128`
   }
   return 'images/favicon.ico'
 }
@@ -118,10 +118,10 @@ function displayBookmarks(){
            
             <div data-index="${bookmark.index}" class="item p-3 rounded-3">
             
-              <a href = "${bookmark.siteURL}" target="_blank" class="image d-block rounded-circle overflow-hidden">
+              <a href = "${bookmark.siteURL}" target="_blank" class="image d-block ">
                 <img
                   class="w-100 h-100 object-fit-cover"
-                  src=${getSiteIcon(bookmark.siteURL)}
+                  src="https://www.google.com/s2/favicons?domain=${bookmark.siteURL}&sz=64"
                   alt="site icon"
                 />
               
