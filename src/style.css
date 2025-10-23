@@ -1,0 +1,146 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-primary:#000500;
+  --bg-secondary:#024724;
+  --main-color:#008b45;
+  --color-1:#00b42d;
+  --color-2:#ddf4e7;
+
+  --duration:0.5s;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+label{
+  text-transform: capitalize;
+}
+
+
+.info{
+  font-size: 13px !important;
+}
+body {
+  margin: 0;
+ 
+  min-width: 320px;
+  min-height: 100vh;
+
+
+  background:linear-gradient(black 30% , transparent   ), var(--bg-primary) radial-gradient(circle,var(--bg-secondary) 10%, transparent 20%) center / 10px 10px;
+  color: var(--color-2);
+  background-attachment: fixed;
+
+ 
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+header .form-control{
+    font-size: 14px;
+}
+
+header .form-control:focus {
+ 
+  border-color: none;
+ 
+  box-shadow: 0 0 0 2px  var(--color-1);
+
+}
+
+button{
+  background-color: var(--main-color);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: var(--color-2);
+}
+
+main *{
+  /* border:  red 1px solid; */
+}
+
+/* header */
+
+header{
+  max-width: 700px;
+}
+/* item */
+div.item{
+  position: relative;
+  background-color: var(--bg-secondary);
+  height: 100px;
+  width: 100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius var(--duration);
+  cursor: pointer;
+  
+}
+
+div.item::after{
+  content:"#" attr(data-index);
+  display: block;
+  position: absolute;
+  top: 0;
+  left:5px;
+  /* margin: 5px; */
+  font-size: 20px;
+  transform: scale(0) translate(-20px ,-20px);
+
+  transition: transform 0.2s;
+}
+div.item div.image{
+  height: 50px;
+  width: 50px;
+  
+}
+
+div.item p{
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+div.item i{
+  position: absolute;
+  right: 2px;
+  top: 5px;
+  opacity: 0;
+  transition: opacity 0.1s ;
+
+  transition: color 0.2s ,  transform 0.2s;
+}
+
+
+
+div.item i:hover{
+color: red;
+transform: scale(1.3);
+}
+
+
+div.item:hover{
+  
+}
+div.item:hover::after{
+  transform: scale(1) translate(0);
+}
+div.item:hover i{
+  opacity: 1;
+}

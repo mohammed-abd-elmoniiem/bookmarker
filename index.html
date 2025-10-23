@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookmarker</title>
+  </head>
+  <body>
+    <header class="mx-auto">
+      <div class="container overflow-hidden">
+        <h1 class="text-center my-5">bookmarker</h1>
+
+        <div class="submit-bookmark p-3">
+          <h2 class="text-center mb-5">
+            <i class="fa fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa fa-bookmark"></i>
+          </h2>
+
+          <div class="mb-1">
+            <label for="site-name" class="form-label">
+              <i class="fa fa-book-bookmark"></i> site Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="site-name"
+              placeholder="Bookmark Name"
+            />
+            <p class="info text-danger mt-2 fs-6 opacity-0">
+              Site name must contain at least 3 characters and numbers
+              only(ab..,123..).
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="site-url" class="form-label">
+              <i class="fa fa-link"></i>
+              site URL</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="site-url"
+              placeholder="website URL"
+            />
+            <p class="info text-danger mt-2 fs-6 opacity-0">
+              Site URL must be valid
+            </p>
+          </div>
+
+          <div class="mb-3 text-center">
+            <button id="btn-submit" class="">submit</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mb-5">
+      <section class="">
+        <div
+          class="items d-flex flex-wrap column-gap-4 justify-content-center row-gap-5 align-items-start"
+        ></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
