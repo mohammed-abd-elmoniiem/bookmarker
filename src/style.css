@@ -10,8 +10,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-primary:#000500;
-  --bg-secondary:#02aa2cf8;
-  --main-color:#008b3f;
+  --bg-secondary:#02aa72f8;
+  --main-color:#7600a5;
   --color-1:#8f6900f8;
   --color-2:#ddf4e7;
 
@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 
 
-  background:linear-gradient(black 30% , transparent   ), var(--bg-primary) radial-gradient(circle,var(--bg-secondary) 10%, transparent 20%) center / 10px 10px;
+  background:linear-gradient(black 30% , #000000ad   ), var(--bg-primary) radial-gradient(circle,var(--bg-secondary) 10%, transparent 20%) center / 10px 10px;
   color: var(--color-2);
   background-attachment: fixed;
 
@@ -87,8 +87,8 @@ header{
 /* item */
 div.item{
   position: relative;
-  background-color:transparent;
-  /* border: 1px solid var(--main-color); */
+  background-color:black;
+  border: 1px solid var(--main-color);
   
 
 
