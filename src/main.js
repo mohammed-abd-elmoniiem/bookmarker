@@ -15,7 +15,7 @@ var regexName = /^[a-zA-Z0-9]{3,}$/;
     url  => scheme://(  127.8.8.8 | www.ex.com ) :port / path ? parameters #fragement
   */
   
-var regexURL = /^(http|https|mailto|ws|wss|dns|ftp|ftps):(\/\/)?(((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))(\.(([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))){3})|(www\.)?[a-zA-Z0-9]+(-?[a-zA-Z0-9])+\.(com|org|net|io|eg))(:[0-9]{1,5})?((\/[\w]*))*(\?([a-zA-Z]+=\w*(&[a-zA-Z]+=\w*)*))?(#([a-zA-Z][a-zA-Z0-9]*)?)?$/;
+var regexURL = /^(http|https|mailto|ws|wss|dns|ftp|ftps):(\/\/)?(((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))(\.(([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))){3})|(www\.)?[a-zA-Z0-9]+(-?[a-zA-Z0-9])+(\.[a-zA-Z]{1,})+)(:[0-9]{1,5})?((\/[\w\-\.~]*))*(\?([a-zA-Z]+=\w*(&[a-zA-Z]+=\w*)*))?(#([a-zA-Z][a-zA-Z0-9]*)?)?$/;
 
 
 
@@ -47,6 +47,8 @@ function storeBookmoarksLocal(){
 
   // get the site icon +++++++++++++++++++++++++++++++++++++++++++++
   window.getSiteIcon = function(url){
+
+    
 
   var result = url.match(/^(http|https|mailto|ws|wss|dns|ftp|ftps):(\/\/)?(((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))(\.(([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))){3})|(www\.)?[a-zA-Z0-9]+(-?[a-zA-Z0-9])+\.(com|org|net|io|eg))/)[0]
 
