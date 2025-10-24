@@ -10,10 +10,10 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-primary:#000500;
-  --bg-secondary:#02aa72f8;
+  --bg-secondary:#fffffff8;
   --main-color:#04ad4a;
   --color-1:#8f6900f8;
-  --color-2:#ddf4e7;
+  --color-2:#ffffff;
 
   --duration:0.5s;
 }
@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 
 
-  background:linear-gradient(black 30% , #000000da   ), var(--bg-primary) radial-gradient(circle,var(--main-color) 10%, transparent 20%) center / 10px 10px;
+  background:linear-gradient(black 30% , #000000da   ), var(--bg-primary) radial-gradient(circle,var(--color-2) 10%, transparent 20%) center / 10px 10px;
   color: var(--color-2);
   background-attachment: fixed;
 
@@ -49,6 +49,7 @@ i{
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+ 
 }
 
 h2{
@@ -88,8 +89,8 @@ header{
 /* item */
 div.item{
   position: relative;
-  background-color:black;
-  border: 1px solid var(--main-color);
+  background-color:var(--bg-secondary);
+  /* border: 1px solid var(--main-color); */
   
 
 
@@ -101,7 +102,7 @@ div.item{
   align-items: center;
   transition: border-radius var(--duration);
   /* cursor: pointer; */
-  /* box-shadow: 0px 20px 20px 15px var(--bg-primary); */
+  
   
 }
 
@@ -126,7 +127,7 @@ div.item i{
   font-size: 14px;
   /* opacity: 0; */
   transition: opacity 0.1s ;
-color: inherit;
+color:rgb(12, 12, 12);
   transition: color 0.2s ,  transform 0.2s;
 }
 

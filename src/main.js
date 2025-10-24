@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-import { animate, scale } from 'motion';
+import { animate, scale, stagger } from 'motion';
 
 var regexName = /^[a-zA-Z0-9]{3,}$/;
 
@@ -122,7 +122,7 @@ function displayBookmarks(){
             
               <a href = "${bookmark.siteURL}" target="_blank" class="image d-block rounded-3 overflow-hidden">
                 <img
-                  class="w-100 h-100 object-fit-cover"
+                  class="w-100 h-100 object-fit-cover text-dark"
                   src="https://www.google.com/s2/favicons?domain=${bookmark.siteURL}&sz=128"
                   alt="site icon"
                 />
@@ -204,3 +204,8 @@ function isValid(target , regex){
   }
 
 }
+
+
+// animation using motion
+
+animate('.item',{scale:[0,1],rotate:360},{duration:0.5,delay:stagger(0.1),type:'spring',stiffness:50})
