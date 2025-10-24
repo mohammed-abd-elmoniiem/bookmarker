@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-import { animate, scale, stagger } from 'motion';
+import { animate, scale, scroll, stagger } from 'motion';
 
 var regexName = /^[a-zA-Z0-9]{3,}$/;
 
@@ -208,4 +208,12 @@ function isValid(target , regex){
 
 // animation using motion
 
-animate('.item',{scale:[0,1],rotate:360},{duration:0.5,delay:stagger(0.1),type:'spring',stiffness:50})
+
+animate('header div *',{opacity:[0,1]},{duration:1,delay:stagger(0.02)});
+
+animate('button',{rotate:360},{duration:1})
+
+animate('.item',{scale:[0,1],rotate:360},{duration:0.5,delay:stagger(0.1),type:'spring',stiffness:50});
+
+
+scroll((progrss ,info)=>console.log(progrss,info))
