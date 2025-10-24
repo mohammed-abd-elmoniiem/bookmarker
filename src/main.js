@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-import { animate, scale, scroll, stagger } from 'motion';
+import { animate, hover, scale, scroll, stagger } from 'motion';
 
 var regexName = /^[a-zA-Z0-9]{3,}$/;
 
@@ -64,23 +64,6 @@ function storeBookmoarksLocal(){
 
 // display bookmarks after loading the html
 displayBookmarks()
-
-// add new bookmark
-
-btnSubmit.addEventListener('click',function(event){
-
-  if(isValid(siteName , regexName) & isValid(siteURL , regexURL)){
-      bookmarkList.push(createBookmarkObj());
-      displayBookmarks();
-      storeBookmoarksLocal();
-      // resetInput()
-
-  }
-
-
-})
-
-// ----------------------------------------
 
 
 
@@ -143,6 +126,23 @@ function displayBookmarks(){
 // ------------------------------------
 
 
+
+// add new bookmark
+
+btnSubmit.addEventListener('click',function(event){
+
+  if(isValid(siteName , regexName) & isValid(siteURL , regexURL)){
+      bookmarkList.push(createBookmarkObj());
+      displayBookmarks();
+      storeBookmoarksLocal();
+      // resetInput()
+
+  }
+
+
+})
+
+// ----------------------------------------
 
 
 
@@ -212,6 +212,36 @@ function isValid(target , regex){
 animate('header div *',{opacity:[0,1]},{duration:1,delay:stagger(0.02)});
 
 animate('button',{rotate:360},{duration:1})
+
+
+hover('button',Element=>{
+ 
+  
+   if(isValid(siteName , regexName) & isValid(siteURL , regexURL)){
+
+    //  animate(Element,{scale:[1,1.5]},{duration:0.4,type:"spring"})
+     animate(Element,{x:0,y:0,backgroundColor:'#04ad4a' },{duration:0.5,type:'spring'})
+      
+
+  }else{
+    var distance = 0 ;
+    while(!(distance > 0.5 || distance < -0.5)){
+      distance=(Math.random()-0.5)*2
+    }
+
+    if(Element.preDistance != undefined){
+      if(Element.preDistance  * distance >= 0){
+        distance*=-1;
+      }
+    }
+    
+    animate(Element,{x:distance*200,y:distance*10,backgroundColor:'#ff0000' },{duration:0.01})
+    Element.preDistance = distance;
+  
+  }
+
+  
+})
 
 animate('.item',{scale:[0,1],rotate:360},{duration:0.5,delay:stagger(0.1),type:'spring',stiffness:50});
 
